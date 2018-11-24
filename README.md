@@ -18,4 +18,7 @@ mvnw clean package
 run the server:
 ===============
 
-java -jar target\spring-boot-rest-2-0.0.1-SNAPSHOT.jar
+java -jar target/SpringBootRest2API-0.0.1-SNAPSHOT.jar
+
+java -jar target/SpringBootRest2API-0.0.1-SNAPSHOT.jar --debug
+
