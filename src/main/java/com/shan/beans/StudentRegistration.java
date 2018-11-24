@@ -29,7 +29,7 @@ public class StudentRegistration {
 		for(int i=0; i<studentRecords.size(); i++) {
 			Student stdnt = studentRecords.get(i);
 			if(student.registrationNumber.equals(stdnt.registrationNumber)) {
-				studentRecords.set(i, stdnt);
+				studentRecords.set(i, student);
 				return "Update Successfull....";
 			}
 		}
