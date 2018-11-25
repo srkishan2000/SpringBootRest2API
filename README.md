@@ -22,3 +22,7 @@ java -jar target/SpringBootRest2API-0.0.1-SNAPSHOT.jar
 
 java -jar target/SpringBootRest2API-0.0.1-SNAPSHOT.jar --debug
 
+
+Create and Start in docker
+==========================
+./create-and-start-cluster.sh
