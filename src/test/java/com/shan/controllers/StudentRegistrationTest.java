@@ -1,7 +1,5 @@
 package com.shan.controllers;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import java.util.List;
 
 import org.junit.After;
@@ -44,7 +42,8 @@ public class StudentRegistrationTest {
 		// for ADD a Student Registraion
 		List<Student> result = StudentRegistration.getInstance().getStudentRecords();
 		
-		assertThat(result).contains(student);
+		assert(result).contains(student);
+		
 	}
 	
 	@Test
@@ -55,8 +54,8 @@ public class StudentRegistrationTest {
 		StudentRegistration.getInstance().updateStudent(student);
 		List<Student> updateResult = StudentRegistration.getInstance().getStudentRecords();
 		
-		assertThat(updateResult.get(0).getAge()).isEqualTo(50) ;
-		assertThat(updateResult.get(0).getName()).isEqualTo("Testing");
+		assert(updateResult.get(0).getAge() == 50) ;
+		assert(updateResult.get(0).getName().equals("Testing"));
 	}
 	
 	@Test
@@ -65,7 +64,7 @@ public class StudentRegistrationTest {
 		StudentRegistration.getInstance().deleteStudent("001");
 		List<Student> deleteResult = StudentRegistration.getInstance().getStudentRecords();
 		
-		assertThat(deleteResult).isEmpty();
+		assert(deleteResult).isEmpty();
 	}
 
 }
